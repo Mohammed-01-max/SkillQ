@@ -1,0 +1,892 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #f2f2f2;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #1b2430;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+  background: #00e0ff;
+  color: #111;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(busy-working.gif) no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero span {
+  color: #00e0ff;
+}
+
+.info-section {
+  text-align: center;
+  padding: 100px 70px;
+  background: #1b2b3c;
+  border-bottom: 2px solid #00e0ff;
+}
+.unlock-button {
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* Light-to-deep blue gradient */
+  padding: 20px 30px;
+  border: none;
+  color: white; /* better contrast on dark blue */
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+
+.unlock-button:hover {
+  transform: scale(1.05);
+}
+
+.course-section {
+  padding: 60px 20px;
+  background: #1e2a38;
+  text-align: center;
+}
+
+.course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.course-card {
+  background: #fff;
+  color: #111;
+  width: 260px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.course-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+#course-content {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  color: #111;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  animation: fadeScale 0.5s ease-out;
+}
+
+#course-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#course-content li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#00e0ff 0% 0%, #ccc 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00e0ff;
+}
+
+.course-price {
+  font-size: 1.1rem;
+  color: #00e0ff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.locked-msg {
+  color: #ff4b2b;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #00e0ff;
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hidden {
+  display: none;
+}
+
+.premium-section {
+  background-color: #16202a;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  animation: fadeScale 0.7s ease-in-out;
+}
+
+.premium-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.premium-card {
+  background: #1e2a38;
+  padding: 25px;
+  border-radius: 12px;
+  width: 230px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: scale(1.05);
+}
+
+.premium-card h3 {
+  color: #00e0ff;
+  margin-bottom: 10px;
+}
+
+.premium-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.contact-msg {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #ffcc00;
+}.page-load {
+  animation: fadeInPage 0.8s ease-in-out;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/*challenges*/
+.challenge-list {
+      display: none;
+      margin-top: 10px;
+    }
+    .challenge-list h3{
+      color: #111;
+    }
+    
+    .challenge-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .challenge-list li {
+      background:#1e2a38;
+      color: white;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .challenge-list li:hover {
+      background-color: #33bed7;
+      color: #111;
+    }
+.about-us {  
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #093665, #97e0f0); /* blue gradient */
+  color: white;
+}
+
+.about-us h2 {
+     font-size: 2.5rem;
+      margin-bottom: 20px; 
+      color: #dddae6;
+     } 
+.about-us p {
+   font-size: 1.1rem;
+   max-width: 500px; 
+   margin: 0 auto 20px; 
+   color: #dedee9; 
+  } 
+.features { 
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; gap: 30px; 
+  margin-top: 40px; 
+} 
+.feature-box {
+   background: white; 
+   border-radius: 12px; 
+   padding: 20px;
+   width: 250px; 
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+  } 
+.feature-box i { 
+  font-size: 2rem; 
+  color: rgb(8, 136, 234); 
+  margin-bottom: 10px; 
+} 
+.feature-box h4 { 
+  font-size: 1.2rem; 
+  margin-bottom: 10px; 
+  color: #333; 
+} 
+.feature-box p { 
+  color: #666; 
+}
+/* Sign-In Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeScale 0.4s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  padding: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.facebook {
+  background: #1877f2;
+  color: #fff;
+}
+
+.apple {
+  background: #000;
+  color: #fff;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  background: #00e0ff;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.register-text {
+  font-size: 0.9rem;
+  margin-top: 12px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #fff; 
+  color: #333;/* <-- Add this line */
+}
+.register-text a {
+  color: #00e0ff;
+  text-decoration: underline;
+}
+.or-divider {
+  margin: 12px 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+.social-btn.google i {
+  background: linear-gradient(45deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  background-clip: text;              /* Standard */
+  -webkit-background-clip: text;      /* For Chrome/Safari */
+  color: transparent;                 /* Fallback */
+  -webkit-text-fill-color: transparent; /* Required for WebKit */
+}
+/* Animation when premium courses appear */
+.premium-section.animate {
+  animation: fadePop 0.6s ease-in-out;
+}
+
+@keyframes fadePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.premium-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInCard 0.6s ease forwards;
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay each card */
+.premium-card:nth-child(1) { animation-delay: 0.2s; }
+.premium-card:nth-child(2) { animation-delay: 0.4s; }
+.premium-card:nth-child(3) { animation-delay: 0.6s; }
+.premium-card:nth-child(4) { animation-delay: 0.8s; }
+
+
+/* Premium Modal Popup */
+.modal-content.premium-popup {
+  background: linear-gradient(to bottom right, #1f1c2c, #928dab); /* Beautiful modal only */
+  color: #fff;
+  max-width: 700px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  animation: fadePop 0.6s ease;
+  position: relative;
+
+  /* Exclusive to this modal — won't affect others */
+  border: 2px solid #00e0ff;
+  box-shadow: 0 0 20px #00e0ff80;
+}
+
+
+.modal-content.premium-popup h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ff8400; /* 🌟 Bright gold */
+  text-shadow: 1px 1px 5px #000;
+}
+
+
+.modal-content.premium-popup .premium-courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.modal-content.premium-popup .premium-card {
+  background: #2e3b4e;
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  color: #fff;
+  animation: fadeInCard 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.modal-content.premium-popup .premium-card h3 {
+  color: #00e0ff;
+  margin-bottom: 8px;
+}
+
+.modal-content.premium-popup .premium-card p {
+  margin: 5px 0;
+}
+
+.modal-content.premium-popup .contact-msg {
+  color: #ffd700;
+  margin-top: 20px;
+}
+
+.modal-content.premium-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modal-content.premium-popup .premium-card:nth-child(1) { animation-delay: 0.2s; }
+.modal-content.premium-popup .premium-card:nth-child(2) { animation-delay: 0.4s; }
+.modal-content.premium-popup .premium-card:nth-child(3) { animation-delay: 0.6s; }
+.modal-content.premium-popup .premium-card:nth-child(4) { animation-delay: 0.8s; }
+.compiler-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* deep navy blend */
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.compiler-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00e0ff;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.compiler-container {
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 224, 255, 0.3);
+  animation: fadeInCompiler 0.7s ease-in-out;
+}
+
+@keyframes fadeInCompiler {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal-content.compiler-popup {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  max-width: 1000px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 20px;
+  animation: scaleFade 0.5s ease;
+  box-shadow: 0 0 20px #00e0ff80;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-content.compiler-popup h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00e0ff;
+  text-shadow: 1px 1px 4px #000;
+}
+
+@keyframes scaleFade {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.compiler-popup .close-btn {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.compiler-popup .close-btn:hover {
+  color: #00e0ff;
+  transform: scale(1.2);
+}
+/* Floating Chat Button */
+#chatbotButton {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 6px 20px rgba(0, 224, 255, 0.5);
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+#chatbotButton:hover {
+  transform: scale(1.1);
+}
+
+#chatbotButton img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Chatbot Modal */
+.chatbot-modal {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 320px;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00e0ff80;
+  padding: 20px;
+  z-index: 1000;
+  animation: popUpChat 0.4s ease;
+}
+
+.chatbot-box {
+  position: relative;
+  color: white;
+}
+
+.chatbot-box h3 {
+  margin-bottom: 10px;
+  color: #00e0ff;
+}
+
+.chat-window {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  height: 180px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.chatbot-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.chatbot-box .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.chatbot-box .close-btn:hover {
+  color: #00e0ff;
+}
+
+@keyframes popUpChat {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+.challenge-section {
+  padding: 60px 20px;
+  background: #1c2a38;  /* Dark theme match */
+  color: #fff;
+  text-align: center;
+  animation: fadeSlideUp 0.8s ease;
+}
+
+.challenge-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00e0ff;
+}
+
+.challenge-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.challenge-buttons button {
+  background: #2d3e50;
+  color: white;
+  border: 2px solid #00e0ff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.challenge-buttons button:hover {
+  background: #00e0ff;
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 224, 255, 0.4);
+}
+
+/* Entry Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.challenge-popup {
+  background: linear-gradient(to right, #1c2a38, #243447);
+  color: #fff;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px #00e0ff90;
+  animation: fadePop 0.5s ease;
+  position: relative;
+}
+
+.challenge-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.challenge-buttons button {
+  background: #024b8b;
+  border: 2px solid #04456b;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.challenge-buttons button:hover {
+  background: #00e0ff;
+  color: #3bda0f;
+  transform: scale(1.05);
+}
+
+.question-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.question-list li {
+  background: #06b1e1;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+
+.modal.hidden {
+  display: none;
+}
+
+
+.modal-content {
+  background: #fff;
+  color: #111;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  animation: fadeInModal 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+

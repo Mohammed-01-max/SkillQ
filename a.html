@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkilllQ - Learn, Track, Grow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+</body>
+</head>
+<body>
+  <div class="page-load">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+      <img src="logo.jpg" alt="SkilllQ Logo"/>
+        <span>SkilllQ</span>
+      </div>
+      <ul class="nav-center">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+       <li><a href="#" onclick="openChallengeModal()">Challenges</a></li>
+        <li><a href="#" onclick="openCompilerModal()">Practice Time</a></li>
+        <li><a href="#about-us">About Us</a></li>
+
+      </ul>
+      <ul class="nav-right">
+       <li><a href="#" onclick="openSigninModal()">Sign In</a></li>
+        <li><a href="#" onclick="openSignupModal()">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+      <div class="hero-text">
+        <h1>Welcome to <span>SkilllQ</span></h1>
+        <p>Your interactive platform to learn, track progress, and become a tech wizard 🧠</p>
+      </div>
+    </header>
+
+    <!-- Info Section -->
+    <section class="info-section">
+      <h2>🚀 Master Web & Programming Skills with SkilllQ</h2><br><br>
+      <p>Choose your path from HTML, CSS, Python, or even add your own skills. Each module tracks your progress with live updates and personalized learning goals.</p><br><br>
+      <button class="unlock-button" onclick="unlockAdvancedContent()">🔓 Unlock Advanced Content</button>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="course-section">
+      <h2>📚 Courses</h2>
+      <div class="course-cards">
+        <div class="course-card" onclick="loadCourse('HTML')">
+          <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="HTML"/>
+          <h3>HTML</h3>
+        </div>
+        <div class="course-card" onclick="loadCourse('CSS')">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS"/>
+          <h3>CSS</h3>
+        </div>
+        <div class="course-card" onclick="loadCourse('Python')">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python"/>
+          <h3>Python</h3>
+        </div>
+        <!-- Add Skill Card -->
+        <div class="course-card" onclick="addCustomSkill()">
+          <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Add Skill" />
+          <h3>Add Skill</h3>
+        </div>
+      </div>
+      <div id="course-content"></div>
+
+  
+
+
+      <!-- Premium Courses Section -->
+      <div id="premium-section" class="modal hidden">
+  <div class="modal-content premium-popup">
+    <span class="close-btn" onclick="closePremiumModal()">&times;</span>
+    <h2>💼 Premium Programming Courses</h2>
+    <div class="premium-courses">
+      <div class="premium-card">
+        <h3>Java</h3> 
+        <p>Price: ₹699</p>
+        <p>Subscription: 3 months access</p>
+      </div>
+      <div class="premium-card">
+        <h3>C</h3>
+        <p>Price: ₹499</p>
+        <p>Subscription: 2 months access</p>
+      </div>
+      <div class="premium-card">
+        <h3>C++</h3>
+        <p>Price: ₹599</p>
+        <p>Subscription: 3 months access</p>
+      </div>
+      <div class="premium-card">
+        <h3>C#</h3>
+        <p>Price: ₹649</p>
+        <p>Subscription: 3 months access</p>
+      </div>
+    </div>
+    <p class="contact-msg">📞 For more information, contact our member at: <strong>9876543210</strong></p>
+  </div>
+</div>
+
+    </section>
+
+    <!--challenges-->
+  <div id="challenges" class="challenge-list">
+      <h3>Select a Challenge:</h3>
+      <ul>
+        <li onclick="alert('HTML Challenge Loaded!')">HTML Challenges</li>
+        <li onclick="alert('CSS Challenge Loaded!')">CSS Challenges</li>
+        <li onclick="alert('Python Challenge Loaded!')">Python Challenges</li>
+      </ul>
+    </div>
+
+    <!-- About Section -->
+  <section class="about" data-aos="fade-left" id="about-us">
+  <section class="about-us" id="about">
+     <div class="container">
+       <h2>About Us</h2> 
+       <p>At <strong>SkilllQ</strong>, we’re passionate about helping you grow as a modern web developer. Whether you're just starting with HTML and CSS, or diving deep into JavaScript or backend technologies – our platform is built to guide your journey. </p>
+          <p> With interactive lessons, real-time progress tracking, coding challenges, and customizable learning paths, SkilllQ gives you the tools to build your future in tech confidently. </p> 
+          <div class="features"> 
+            <div class="feature-box"> 
+              <i class="fas fa-code"></i>
+               <h4>Hands-on Coding</h4>
+                <p>Practice with real-world projects and challenges.</p>
+               </div> 
+               <div class="feature-box"> 
+                <i class="fas fa-chart-line"></i> 
+                <h4>Track Progress</h4>
+                 <p>Visual dashboards to monitor your skills and milestones.</p> 
+                </div> <div class="feature-box">
+                   <i class="fas fa-users"></i> 
+                   <h4>Community Support</h4>
+                    <p>Join a community of learners, mentors, and developers.</p>
+                   </div> 
+                  </div> 
+                </div>
+  </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Follow Us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <!-- Sign-In Modal -->
+<div id="signinModal" class="modal hidden">
+  <div class="modal-content signin-box">
+    <span class="close-btn" onclick="closeSigninModal()">&times;</span>
+    <h2>Sign-in</h2>
+
+    <div class="social-buttons">
+      <button class="social-btn google">
+  <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" class="google-logo" />
+  Continue with Google
+</button>
+
+      <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+      <button class="social-btn apple"><i class="fab fa-apple"></i> Continue with Apple</button>
+    </div>
+
+    <p class="or-divider">or</p>
+
+    <input type="email" placeholder="Your email" />
+    <input type="password" placeholder="Your password" />
+
+    <button class="login-btn">Login</button>
+    <p class="register-text">Don’t have an account? <a href="#" onclick="switchToSignup()">Register</a></p>
+  </div>
+</div>
+<!-- Sign-Up Modal -->
+<div id="signupModal" class="modal hidden">
+  <div class="modal-content signin-box">
+    <span class="close-btn" onclick="closeSignupModal()">&times;</span>
+    <h2>Sign-up</h2>
+
+    <div class="social-buttons">
+      <button class="social-btn google">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" class="google-logo" />
+        Continue with Google
+      </button>
+      <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+      <button class="social-btn apple"><i class="fab fa-apple"></i> Continue with Apple</button>
+    </div>
+
+    <p class="or-divider">or</p>
+
+    <input type="text" placeholder="Your name" />
+    <input type="email" placeholder="Your email" />
+    <input type="password" placeholder="Create password" />
+    <input type="password" placeholder="Confirm password" />
+
+    <button class="login-btn">Create Account</button>
+    <p class="register-text">Already have an account? <a href="#" onclick="switchToSignin()">Sign in</a></p>
+  </div>
+</div>
+<!-- Compiler Modal -->
+<div id="compilerModal" class="modal hidden">
+  <div class="modal-content compiler-popup">
+    <span class="close-btn" onclick="closeCompilerModal()">&times;</span>
+    <h2>🛠️ Practice Time</h2>
+    <iframe
+      src="https://onecompiler.com/embed/python"
+      frameborder="0"
+      width="100%"
+      height="500"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+<!-- ✅ Commented out old chatbot UI -->
+
+Floating Chatbot Button and Modal (Commented Out)
+
+<div id="chatbotButton" onclick="openChatbot()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Icon" style="width: 40px; height: 40px;" />
+</div>
+
+<div id="chatbotModal" class="chatbot-modal hidden">
+  <div class="chatbot-box">
+    <span class="close-btn" onclick="closeChatbot()">&times;</span>
+    <h3>🤖 SkilllQ Bot</h3>
+    <div class="chat-window">
+      <p><strong>Bot:</strong> Hi there! How can I assist you today? 😊</p>
+    </div>
+    <form id="chatForm" onsubmit="handleUserMessage(event)">
+      <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off" />
+    </form>
+  </div>
+</div>
+
+
+  <!-- ✅ Remove the old link button (optional) -->
+
+<a href="https://creator.voiceflow.com/prototype/686c9824be94e22af8563460" target="_blank" class="chat-btn">
+  💬 Ask SkilllQ Assistant
+</a>
+
+
+
+
+</body>
+</html>
+
