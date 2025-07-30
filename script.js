@@ -201,7 +201,7 @@ async function handleUserMessage(event) {
   chatWindow.innerHTML += `<p><strong>Bot:</strong> <em>Typing...</em></p>`;
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
-  // Fetch response from ChatGPT API ("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")
+  // Fetch response from ChatGPT API () 
  const response = await fetch("/.netlify/functions/chatgpt", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
